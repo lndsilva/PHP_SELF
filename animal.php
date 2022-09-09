@@ -6,7 +6,7 @@
 
 		public function teste(){
 			echo "\$this é instância de ".
-			get_class($this) . "<br>";
+			get_class($this) . "\n";
 
 			// chama Animal::fala(), independentemente do
     		// tipo da instância
@@ -16,7 +16,7 @@
 		}
 
 		public function fala(){
-			echo "<br> Oi <br>";
+			echo "\n Oi \n";
 		}
 
 	}
@@ -24,7 +24,7 @@
 	class Gato extends Animal{
 
 		public function fala(){
-			echo "Miau <br>";
+			echo "Miau \n";
 		}
 	}
 	// Nesse caso, self != get_class($this)
@@ -34,7 +34,7 @@
 	$gato = new Gato();
 	$gato->teste();
 
-	echo "<br>";
+	echo "\n";
 
 	//Nesse caso, self == get_class($this) == Animal
 
